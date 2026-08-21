@@ -1,6 +1,6 @@
 # 🚀 Proyecto Demostrativo: TypeScript + Supabase API (Bootcamp)
 
-Este proyecto está diseñado para enseñar cómo conectar una aplicación en **TypeScript** con una base de datos **PostgreSQL** alojada en **Supabase**, estructurando el código de manera modular y profesional siguiendo buenas prácticas de la industria.
+Este proyecto está diseñado para cómo conectar una aplicación en **TypeScript** con una base de datos **PostgreSQL** alojada en **Supabase**, estructurando el código de manera modular y profesional siguiendo buenas prácticas de la industria.
 
 ---
 
@@ -61,17 +61,9 @@ Este proyecto está diseñado para enseñar cómo conectar una aplicación en **
 
 ---
 
-## 💡 Guía Pedagógica para la Presentación en el Bootcamp
+## 💡 Guía
 
-### 1. ¿Por qué usar TypeScript con Bases de Datos?
-- Explicar a los alumnos cómo el archivo [`src/types/database.ts`](file:///Users/cesar/Documents/projects/bootcamp-2025_2026/programacion/typescript_codigo/src/types/database.ts) previene errores tipográficos en nombres de columnas (`email`, `nombre`, etc.) antes de ejecutar el código.
-
-### 2. Separación de Responsabilidades (Architecture Pattern)
-- **Configuración** ([`src/config/supabase.ts`](file:///Users/cesar/Documents/projects/bootcamp-2025_2026/programacion/typescript_codigo/src/config/supabase.ts)): Centraliza la conexión y valida las variables de entorno.
-- **Servicio** ([`src/services/usuarios.service.ts`](file:///Users/cesar/Documents/projects/bootcamp-2025_2026/programacion/typescript_codigo/src/services/usuarios.service.ts)): Encapsula las consultas a la base de datos (SELECT, INSERT, etc.).
-- **Punto de Entrada** ([`src/index.ts`](file:///Users/cesar/Documents/projects/bootcamp-2025_2026/programacion/typescript_codigo/src/index.ts)): Presenta los resultados y maneja los errores visualmente.
-
-### 3. Script SQL de Demostración (Opcional en Supabase SQL Editor)
+### 1- Script SQL de Demostración (Opcional en Supabase SQL Editor)
 Si la tabla `usuarios` aún no está creada o no tiene datos de prueba, puedes ejecutar esto en el **SQL Editor** de Supabase:
 
 ```sql
