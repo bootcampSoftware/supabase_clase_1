@@ -27,7 +27,7 @@ Este proyecto está diseñado para cómo conectar una aplicación en **TypeScrip
 
 ## 🛠️ Requisitos Previos
 
-- **Node.js**: v18 o superior.
+- **Node.js**: v22 o superior.
 - **npm**: v9 o superior.
 
 ---
