@@ -33,3 +33,16 @@ insert into moves (game_id, player_id, position, move_number) values
   (4, 3, 0, 1), (4, 5, 4, 2), (4, 3, 3, 3), (4, 5, 1, 4), (4, 3, 6, 5),
   (11, 5, 4, 1), (11, 1, 0, 2);
 
+
+
+-- RETOS 1
+-- a) Jugadores mexicanos registrados en los últimos 30 días (fabian, hugo)
+-- b) Partidas que siguen en juego
+-- c) Las 3 partidas terminadas más recientes
+
+
+
+-- RETOS 2
+-- a) Casilla más usada en toda la historia
+-- b) Empates con el nombre de ambos jugadores
+-- c) Duración promedio de las partidas terminadas (finished_at - created_at)
