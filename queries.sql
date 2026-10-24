@@ -1,3 +1,37 @@
+-- ---------- Esquema ----------
+ 
+create table players (
+  id         bigint generated always as identity primary key,
+  username   text not null unique,
+  country    text,
+  created_at timestamptz not null default now()
+);
+ 
+create table games (
+  id          bigint generated always as identity primary key,
+  player_x    bigint not null references players(id),
+  player_o    bigint not null references players(id),
+  winner      bigint references players(id),
+  status      text not null default 'waiting'
+              check (status in ('waiting', 'playing', 'finished', 'draw')),
+  created_at  timestamptz not null default now(),
+  finished_at timestamptz,
+  check (player_x <> player_o)
+);
+ 
+create table moves (
+  id          bigint generated always as identity primary key,
+  game_id     bigint not null references games(id) on delete cascade,
+  player_id   bigint not null references players(id),
+  position    smallint not null check (position between 0 and 8),
+  move_number smallint not null check (move_number between 1 and 9),
+  created_at  timestamptz not null default now(),
+  unique (game_id, position),
+  unique (game_id, move_number)
+);
+
+
+
 insert into players (username, country, created_at) values
   ('ana',    'MX', now() - interval '60 days'),
   ('bruno',  'MX', now() - interval '55 days'),
